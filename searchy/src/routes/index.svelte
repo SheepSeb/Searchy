@@ -2,19 +2,39 @@
     import Button, { Label } from '@smui/button';
     import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
     import IconButton ,{ Icon }from '@smui/icon-button';
+    import Textfield from '@smui/textfield';
+    import HelperText from '@smui/textfield/helper-text';
     import Card, {
     Content,
     Actions,
     ActionButtons,
     ActionIcons,
   } from '@smui/card';
-
   import Dialog from '@smui/dialog';
-
+  import Fab from '@smui/fab'
     let secondaryColor = false;
     let open = false;
+    let open2 = false;
+    let title ='';
+    let decription = '';
+    let random_val = '';
+
+    //TODO: Implement sending msg to server
+    function sendMessage() {
+      alert('Sending message...');
+    }
 </script>
 
+<style>
+  .footer{
+    position: fixed;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
+    color: white;
+    text-align: center;
+  } 
+</style>
 
 <link
   rel="stylesheet"
@@ -43,12 +63,8 @@
           <Title>Searchy</Title>
         </Section>
         <Section align="end" toolbar>
-          <IconButton class="material-icons" aria-label="Download"
-            >file_download</IconButton>
-          <IconButton class="material-icons" aria-label="Print this page"
-            >print</IconButton>
-          <IconButton class="material-icons" aria-label="Bookmark this page"
-            >bookmark</IconButton>
+          <IconButton class="material-icons" aria-label="AccountCircleIcon">
+              account_circle</IconButton>
         </Section>
       </Row>
 </TopAppBar>
@@ -71,11 +87,39 @@
       </Button>
   </Actions>
 </Dialog>
+<div class="center">
+  <Dialog
+  bind:open={open2}
+  aria-labelledby="label_aria"
+  aria-describedby="description_aria"
+  surface$style="width: 850px; max-width: calc(100vw - 32px);"
+  >
+  <br>
+  <Title id="post_title">Add a post</Title>
+  <br>
+  <Content id="content_id">
+    <Textfield     style="width: 100%;"
+    helperLine$style="width: 100%;" variant="outlined" bind:value={title} label="Title" type="text">
+      <HelperText slot="helper">title</HelperText>
+    </Textfield>
+    <Textfield     style="width: 100%;"
+    helperLine$style="width: 100%;" variant="outlined" bind:value={decription} label="Description" type="text">
+      <HelperText slot="helper">breif description</HelperText>
+    </Textfield>
+  </Content>
+  <Actions>
+      <Button on:click={() => (open2 = false)}>
+      <Label>Done</Label>
+      </Button>
+  </Actions>
+  </Dialog>
+</div>
+
     <Card>
       <Content>A card with Both.</Content>
       <Actions>
         <ActionButtons>
-          <Button>
+          <Button on:click={() => sendMessage()}>
             <Label>Send Message</Label>
           </Button>
           <Button on:click={() => (open = true)}>
@@ -98,3 +142,13 @@
         </ActionIcons>
       </Actions>
     </Card>
+<div class="footer">
+  <div class="flexy">
+    <div class="margins">
+      <Fab color="primary" on:click={() => open2 = true}>
+        <Icon class="material-icons">add</Icon>
+      </Fab>
+    </div>
+  </div>
+</div>
+
