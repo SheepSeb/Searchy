@@ -44,19 +44,22 @@
 
 <div class="center">
   <img src="https://picsum.photos/200" class="center" />
-  <Textfield variant="outlined" bind:value={value_email} label="Email" type="email">
+  <Textfield style="width: 100%;"
+  helperLine$style="width: 100%;" variant="outlined" bind:value={value_email} label="Email" type="email">
     <HelperText slot="helper">user@psw.com</HelperText>
   </Textfield>
   <br>
   <br>
   <div>
-    <Textfield variant="outlined" bind:value={value_pswd} label="Password" type="password">
+    <Textfield style="width: 100%;"
+    helperLine$style="width: 100%;" variant="outlined" bind:value={value_pswd} label="Password" type="password">
       <HelperText slot="helper">Choose a strong password</HelperText>
     </Textfield>
   </div>
   <br>
   <br>
-  <Button>
+  <Button style="width: 100%;"
+  helperLine$style="width: 100%;">
     <Label>Login</Label>
   </Button>
 </div>

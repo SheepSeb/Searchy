@@ -54,26 +54,30 @@
 <body>
     <div class="center">
         <img src="https://picsum.photos/500" class="center" />
-        <Textfield variant="outlined" bind:value={value_email} label="Email" type="email">
+        <Textfield  style="width: 100%;"
+        helperLine$style="width: 100%;"variant="outlined" bind:value={value_email} label="Email" type="email">
           <HelperText slot="helper">user@psw.com</HelperText>
         </Textfield>
         <br>
         <br>
         <div>
-          <Textfield variant="outlined" bind:value={value_pswd} label="Password" type="password">
+          <Textfield style="width: 100%;"
+          helperLine$style="width: 100%;" variant="outlined" bind:value={value_pswd} label="Password" type="password">
             <HelperText slot="helper">Choose a strong password</HelperText>
           </Textfield>
         </div>
         <br>
         <br>
         <div>
-          <Textfield variant="outlined" bind:value={value_pswd2} label="Password" type="password">
+          <Textfield style="width: 100%;"
+          helperLine$style="width: 100%;" variant="outlined" bind:value={value_pswd2} label="Password" type="password">
             <HelperText slot="helper">Retype your password</HelperText>
           </Textfield>
         </div>
         <br>
         <br>
-        <Button on:click>
+        <Button style="width: 100%;"
+        helperLine$style="width: 100%;" on:click>
           <Label>Register</Label>
         </Button>
       </div>
