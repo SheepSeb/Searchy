@@ -59,7 +59,7 @@
   <br>
   <br>
   <Button style="width: 100%;"
-  helperLine$style="width: 100%;">
+  helperLine$style="width: 100%;" href=".">
     <Label>Login</Label>
   </Button>
 </div>

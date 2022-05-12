@@ -22,6 +22,7 @@
     let open3 = false;
     let open4 = false;
     let open5 = false;
+    let open6 = false;
     //TODO: Implement sending msg to server
     let shown = false;
     let show_not = true;
@@ -138,6 +139,26 @@
   </Actions>
 </Dialog>
 
+<Dialog
+  bind:open = {open6}
+  aria-labelledby="large-scroll-title"
+  aria-describedby="large-scroll-content"
+  surface$style="width: 850px; max-width: calc(100vw - 32px);"
+  >
+  <Title id="large-scroll-title">Help SDA</Title>
+  <Content id="large-scroll-content">
+    <ul>
+      <li>Wanted help for graph homework</li>
+      <li>Algebra help</li>
+    </ul>  
+  </Content>
+  <Actions>
+      <Button on:click={() => (open6 = false)}>
+      <Label>Done</Label>
+      </Button>
+  </Actions>
+</Dialog>
+
 <div class="center">
   <Dialog
   bind:open={open5}
@@ -167,6 +188,9 @@
   </Dialog>
 </div>
 
+
+
+
 <div class="center">
   <Dialog
   bind:open={open2}
@@ -188,7 +212,7 @@
     </Textfield>
   </Content>
   <Actions>
-      <Button on:click={() => (open2 = false)} href="/new">
+      <Button on:click={() => (open2 = false)}>
       <Label>Done</Label>
       </Button>
   </Actions>
@@ -282,6 +306,36 @@
         </ActionIcons>
       </Actions>
     </Card>
+    <br>
+    <br>
+    <Card>
+        <Title>Help SDA</Title>
+        <Actions>
+          <ActionButtons>
+            <Button on:click={() => (open5 = true)}>
+              <Label>Send Message</Label>
+            </Button>
+            <Button on:click={() => (open6 = true)}>
+              <Label>More</Label>
+            </Button>
+          </ActionButtons>
+          <ActionIcons>
+            <IconButton
+              toggle
+              aria-label="Add to favorites"
+              title="Add to favorites"
+            >
+              <Icon class="material-icons" on>favorite</Icon>
+              <Icon class="material-icons">favorite_border</Icon>
+            </IconButton>
+            <IconButton
+              class="material-icons"
+              title="Share" href="https://www.facebook.com/">share</IconButton
+            >
+          </ActionIcons>
+        </Actions>
+      </Card>
+
 <div class="footer">
   <div class="flexy">
     <div class="margins">

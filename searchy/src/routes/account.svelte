@@ -47,7 +47,7 @@
     >
       <Row>
         <Section>
-          <IconButton class="material-icons">menu</IconButton>
+          <IconButton class="material-icons" href=".">menu</IconButton>
           <Title>Searchy</Title>
         </Section>
         <Section align="end" toolbar>
@@ -60,24 +60,21 @@
     <img src="https://picsum.photos/200" class="center" alt="account_img"/>
 </div>
       <Card class="maring_card" variant="outlined" padded>
-        User Details to ADD
+        Nume : Maria
       </Card>
       <Card variant="outlined" padded>
-        User Details to ADD
+        Prenume : Popescu
       </Card>
       <Card variant="outlined" padded>
-        User Details to ADD
+        Email : mariap@gmail.com
       </Card>
       <Card variant="outlined" padded>
-        User Details to ADD
-      </Card>
-      <Card variant="outlined" padded>
-        User Details to ADD
+        Posts : 3
       </Card>
 
-      <div class="center">
+      <!-- <div class="center">
         <Button style="width: 100%;">
           Edit detials
         </Button>  
-      </div>
+      </div> -->
  
