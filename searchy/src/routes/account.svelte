@@ -48,7 +48,7 @@
       <Row>
         <Section>
           <IconButton class="material-icons" href=".">menu</IconButton>
-          <Title>Searchy</Title>
+          <Title>exChagne</Title>
         </Section>
         <Section align="end" toolbar>
           <IconButton class="material-icons" aria-label="AccountCircleIcon">
